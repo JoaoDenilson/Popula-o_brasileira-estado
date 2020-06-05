@@ -15,8 +15,8 @@ dataset = []
 for tr in soup.select('#mw-content-text .wikitable tbody tr'):
   tds = tr.select('td')
   if len(tds) >= 3 :
-    estado = tds[1].get.text().replace('\n','')
-    populacao = tds[2].get.text().replace('\n','')
+    estado = tds[1].get_text().replace('\n','')
+    populacao = tds[2].get_text().replace('\n','')
     #print(estado, populacao)
     dataset.append((estado,populacao))
 
